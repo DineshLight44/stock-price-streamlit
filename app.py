@@ -1,11 +1,11 @@
 import streamlit as st
 import numpy as np
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 import pickle
 
 # Load model and scaler
 model = load_model('stock_rnn_model.h5')
-with open(r'D:\datasets\model\scaler.pkl', 'rb') as f:
+with open('scaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
 
 # Streamlit app layout
